@@ -1,0 +1,84 @@
+html,body{
+    background-image:url(/bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    height: 100%;
+    align-content: center;
+}
+
+.card{
+    height: 500px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.card-header h3{
+    text-align: center;
+    color: white;
+}
+
+.social_icon span{
+    font-size: 60px;
+    margin-left: 10px;
+    color: #ec6630;
+}
+
+.social_icon span:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.input-group-prepend span{
+    width: 50px;
+    background-color: #df6021;
+    color: white; /* Cambia el color del texto a blanco */
+    border:0 !important;
+    text-align: center; /* Centra el texto */
+}
+
+input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.links{
+    color: white;
+}
+
+.links a{
+    margin-left: 4px;
+}
+
+.login_btn{
+    color: black;
+    background-color: #ed5927;
+    width: 100px;
+}
+
+.login_btn:hover{
+    color: black;
+    background-color: white;
+}
+.btn {
+    display: inline-block;
+    background-color: #ed5927;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}

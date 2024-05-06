@@ -40,12 +40,12 @@ export function userstate(){
       const uid = user.uid;
       console.log(uid)
     } else {
-      window.location.href='../index.html'
+      window.location.href='/index.html'
     }
   });
 }
 
 //Crear cuentas de authenticación
 export const registerauth=(email,password)=>
-  createUserWithEmailAndPassword(auth, email, password)
+  createUserWithEmailAndPassword(auth, email, password);
 
