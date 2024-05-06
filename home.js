@@ -1,4 +1,4 @@
-import{userstate, loginout} from 'firebase.js'
+import{userstate, loginout} from '/firebase.js'
 
 userstate()
 
@@ -10,7 +10,7 @@ async function cerrarsesion(){
 
     .then((comprobar)=>{
         alert('Sesion cerrada')
-        window.location.href='index.html'
+        window.location.href='/index.html'
     })
     .catch((error)=>{
         alert('Sesion no cerrada')

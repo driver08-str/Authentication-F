@@ -1,4 +1,4 @@
-import{loginauth} from "firebase.js"
+import{loginauth} from "/firebase.js"
 
 const recibir = document.getElementById("loginbtn")
 
@@ -13,7 +13,7 @@ async function validar(){
     if(validation != null)
     {
         alert("User authentication succesfull "+email)
-        window.location.href="home.html"
+        window.location.href="/home.html"
     }
     else
     {
