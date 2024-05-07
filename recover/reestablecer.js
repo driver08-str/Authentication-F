@@ -1,16 +1,17 @@
-import{sendPasswordResetEmail}  from "/firebase.js"
+import{recover}  from "../firebase.js"
 
-const recover = document.getElementById("recoverybtn")
+const recovery = document.getElementById("recoverybtn")
+console.log("en js de reestablecer")
 
 async function Resetear(){
     const email = document.getElementById('edtuser').value
 
-    const verificar=sendPasswordResetEmail(email)
+    const verificar=recover(email)
     const validation = await verificar
 
     .then((validation) => {
         alert("Reset verification succesfull "+email)
-        window.location.href="/recover/recuperar.html"
+        window.location.href="../index.html"
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -19,5 +20,5 @@ async function Resetear(){
 }
 
 window.addEventListener('DOMContentLoaded', async()=>{
-    recover.addEventListener('click', Resetear)
+    recovery.addEventListener('click', Resetear)
 })
