@@ -48,4 +48,10 @@ export function userstate(){
 //Crear cuentas de authenticación
 export const registerauth=(email,password)=>
   createUserWithEmailAndPassword(auth, email, password);
+//Recuperar contraseña
+
+export const recover=(email)=>{ 
+    sendPasswordResetEmail(auth, email);
+}
+
 
