@@ -1,11 +1,11 @@
-import{Resetpassword}  from "/firebase.js"
+import{sendPasswordResetEmail}  from "/firebase.js"
 
 const recover = document.getElementById("recoverybtn")
 
 async function Resetear(){
     const email = document.getElementById('edtuser').value
 
-    const verificar=Resetpassword(email)
+    const verificar=sendPasswordResetEmail(email)
     const validation = await verificar
 
     .then((validation) => {
@@ -15,7 +15,6 @@ async function Resetear(){
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
       });
 }
 

@@ -1,11 +1,11 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js'
-
 import { 
     getAuth, 
     signInWithEmailAndPassword,
     signOut,
     onAuthStateChanged,
-    createUserWithEmailAndPassword   
+    createUserWithEmailAndPassword,
+    sendPasswordResetEmail
 } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
 
 
@@ -48,10 +48,7 @@ export function userstate(){
 //Crear cuentas de authenticación
 export const registerauth=(email,password)=>
   createUserWithEmailAndPassword(auth, email, password);
+
 //Recuperar contraseña
-
-export const recover=(email)=>{ 
-    sendPasswordResetEmail(auth, email);
-}
-
-
+export const recover=(email)=>
+sendPasswordResetEmail(auth, email);
