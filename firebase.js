@@ -5,7 +5,11 @@ import {
     signOut,
     onAuthStateChanged,
     createUserWithEmailAndPassword,
-    sendPasswordResetEmail
+    sendPasswordResetEmail,
+    signInWithPopup, 
+    GoogleAuthProvider,
+    FacebookAuthProvider 
+
 } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
 
 
@@ -52,3 +56,15 @@ export const registerauth=(email,password)=>
 //Recuperar contraseña
 export const recover=(email)=>
 sendPasswordResetEmail(auth, email);
+
+//metodo de autenticacion de google
+export const iniciogoogle=()=>{
+  const provider = new GoogleAuthProvider();
+  return signInWithPopup(auth, provider)
+}
+
+//metodo de autenticacion de facebook
+export const iniciofacebook=()=>{
+  const provider = new FacebookAuthProvider();
+  return signInWithPopup(auth, provider)
+}
