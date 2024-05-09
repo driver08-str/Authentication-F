@@ -12,7 +12,12 @@ import {
 
 } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
 
-
+//firestore
+import {
+  getFirestore,
+  collection,
+  addDoc
+} from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDSK1qsE3Vy5kZBWaE7MeC8WuuwmLovRNs",
@@ -26,8 +31,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
+const db = getFirestore(app);
 
 //metodo de autenticacion de usuario
 export const loginauth=(email,password)=>
@@ -68,3 +73,33 @@ export const iniciofacebook=()=>{
   const provider = new FacebookAuthProvider();
   return signInWithPopup(auth, provider)
 }
+
+
+
+//firestore
+export const addProduct = (codigo, nombre, descripcion, cant, email) =>
+  addDoc(collection(db, "productos"), {
+      codigo: codigo,
+      nombre: nombre,
+      descripcion: descripcion,
+      cantidad: cant,
+      ownerEmail: email
+  })
+
+export const addDataUser = (identi, name, birthdate, dir, tel, email) =>
+  addDoc(collection(db, "users"), {
+      userIdentification: identi,
+      userName: name,
+      userBirthDate: birthdate,
+      userDirection: dir,
+      userPhone: tel,
+      userEmail: email
+  })
+
+  export const getUserEmail = () => {
+      const user = getAuth().currentUser
+      if (user != null) {
+          return user.email
+      }
+      return null
+  }

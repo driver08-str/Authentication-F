@@ -3,7 +3,7 @@ import {iniciofacebook} from '../firebase.js';
 const facebookBtn = document.getElementById('facebookbtn');
 
 facebookBtn.addEventListener('click', () => {
-    signInWithPopup(provider)
+    signInWithPopup(provider) 
         .then((result) => {
             // El usuario ha iniciado sesión correctamente.
             const user = result.user;
