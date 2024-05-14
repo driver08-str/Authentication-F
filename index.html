@@ -42,6 +42,11 @@
                         <input type="submit" id="googlebtn" value="Iniciar con Google" class="btn btn-danger">
                         <input type="submit" id="facebookbtn" value="Iniciar con Facebook" class="btn btn-primary">
                         <input type="submit" id="atrasbtn" value="Atras" class="btn btn-secundary">
+                        <script>
+                        document.getElementById('atrasbtn').addEventListener('click', function() {
+                            window.location.href = "/admin/inicio.html";
+                        });
+                        </script>
                     </div>
 
                 </div>
