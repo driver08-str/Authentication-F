@@ -16,7 +16,8 @@ import {
 import {
   getFirestore,
   collection,
-  addDoc
+  addDoc,
+  getDocs
 } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -103,3 +104,7 @@ export const addDataUser = (identi, name, birthdate, dir, tel, email) =>
       }
       return null
   }
+
+  //mostrar productos
+export const viewproducts=()=>
+  getDocs(collection(db, "productos"));
