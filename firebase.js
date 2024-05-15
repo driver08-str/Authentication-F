@@ -8,7 +8,8 @@ import {
     sendPasswordResetEmail,
     signInWithPopup, 
     GoogleAuthProvider,
-    FacebookAuthProvider 
+    FacebookAuthProvider,
+    deleteUser
 
 } from 'https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js'
 
@@ -17,7 +18,11 @@ import {
   getFirestore,
   collection,
   addDoc,
-  getDocs
+  getDocs,
+  query,
+  where,
+  deleteDoc,
+  doc
 } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -109,3 +114,14 @@ export const addProduct = (codigo, nombre, apellido,email,correo) =>
   //mostrar productos
 export const viewproducts=()=>
   getDocs(collection(db, "productos"));
+
+//eliminar informacion de usuario (admin)
+export const getDocUser = (email) => {
+  const q = query(collection(db, "users"), where("userEmail", "==", email));
+
+  const querySnapshot = getDocs(q);
+  return querySnapshot
+}
+export const deleteDataUser = (idDoc) => {
+  deleteDoc(doc(db, "users", idDoc))
+}
