@@ -21,4 +21,4 @@ async function cargar(){
 
 window.addEventListener('DOMContentLoaded', async()=>{
     cargar()
-})
+}) 

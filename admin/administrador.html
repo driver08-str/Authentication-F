@@ -15,9 +15,18 @@
     <br>
     <div class="d-grid gap-2 col-6 mx-auto">
         <button id="crearuser" class="btn btn-primary" type="button"><i class="fa fa-user-plus"></i> Crear nuevo usuario</button>
-        <button id="deleteuser" class="btn btn-primary" type="button"><i class="fa fa-user-times"></i> Eliminar usuario</button>
         <button id="viewUser" class="btn btn-primary" type="button"><i class="fa fa-users"></i> Ver usuarios registrados</button>
         <button id="logout" class="btn btn-primary" type="button"><i class="fa fa-sign-out"></i> Cerrar sesión</button>
       </div>
+      <script type="module" src="../authentication.js"></script>
+      <script>
+        document.getElementById("crearuser").addEventListener("click", () => {
+          window.location.href = "../crear/crear.html";
+        });
+        document.getElementById("viewUser").addEventListener("click", () => {
+          window.location.href = "../viewUser/viewUser.html";
+        });
+      </script>
+
 </body>
 </html>

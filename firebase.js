@@ -86,16 +86,17 @@ export const addProduct = (codigo, nombre, descripcion, cant, email) =>
       cantidad: cant,
       ownerEmail: email
   })
-
-export const addDataUser = (identi, name, birthdate, dir, tel, email) =>
-  addDoc(collection(db, "users"), {
-      userIdentification: identi,
-      userName: name,
-      userBirthDate: birthdate,
-      userDirection: dir,
-      userPhone: tel,
-      userEmail: email
-  })
+//agregar usuario
+  export const addviewuser = (nombre, apellido, email, password, cpassword) =>
+    addDoc(collection(db, "usuarios"), {
+        Id: IdUser,
+        Nombre: nombre,
+        Apellido: apellido,
+        Email: email,
+        Contraseña: password,
+        Confirmar_Contraseña: cpassword
+    });
+  
 
   export const getUserEmail = () => {
       const user = getAuth().currentUser

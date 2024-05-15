@@ -18,16 +18,20 @@
     <br>
     <form>
         <label for="username">Usuario:</label>
-        <input type="text" id="username" name="username" required placeholder="Usuario"><br><br>
+        <input type="text" id="edtuser" name="username" required placeholder="Usuario"><br><br>
         
         <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required placeholder="Contraseña"><br><br>
+        <input type="password" id="edtpassword" name="password" required placeholder="Contraseña"><br><br>
+    
 
-        <button type="submit"><i class="fa fa-sign-in"></i> Iniciar sesión</button>
+    <button type="button" onclick="window.location.href = 'administrador.html'">Ir</button>
+
+        <button type="submit" id="loginbtn"><i class="fa fa-sign-in"></i> Iniciar sesión</button>
         <button type="button" onclick="window.location.href = 'inicio.html'"><i class="fa fa-arrow-left"></i> Volver</button>
     </form>
     </form>
 </center>
+<script type="module" src="../authentication.js"></script>
 </body>
 </html>
 
