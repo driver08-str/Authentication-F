@@ -13,7 +13,7 @@ async function validar() {
         // Lógica de autenticación de administrador
         if (email == "drivere53@gmail.com" && password == "12345dre") {
             alert("Inicio de sesión exitoso " + email);
-            window.location.href = "./admistrador.html"
+            window.location.href = "admin/administrador.html"
         } else {
             alert("Error de usuario verifique usuario y/o contraseña");
             console.log("Sesion " + email + " not validation");

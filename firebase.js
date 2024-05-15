@@ -78,12 +78,12 @@ export const iniciofacebook=()=>{
 
 
 //firestore
-export const addProduct = (codigo, nombre, descripcion, cant, email) =>
+export const addProduct = (codigo, nombre, apellido,email,correo) =>
   addDoc(collection(db, "productos"), {
       codigo: codigo,
       nombre: nombre,
-      descripcion: descripcion,
-      cantidad: cant,
+      apellido: apellido,
+      correo: correo,
       ownerEmail: email
   })
 //agregar usuario

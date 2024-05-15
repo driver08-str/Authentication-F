@@ -12,8 +12,8 @@ async function cargar(){
             <tr>
             <th scope="row">${doc.data().codigo}</th>
             <td>${doc.data().nombre}</td>
-            <td>${doc.data().descripcion}</td>
-            <td>${doc.data().cantidad}</td>
+            <td>${doc.data().apellido}</td>
+            <td>${doc.data().correo}</td>
             </tr>
         `
     });

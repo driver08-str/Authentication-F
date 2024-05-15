@@ -9,11 +9,11 @@ async function agg_product() {
         if (window.correcto === true) {
             const codigo = document.getElementById("Pcodigo").value;
             const nombre = document.getElementById("Pnombre").value;
-            const descripcion = document.getElementById("Pdescripcion").value;
-            const cantidad = document.getElementById("Pcantidad").value;
+            const apellido = document.getElementById("Papellido").value;
+            const correo = document.getElementById("Pcorreo").value;
 
-            await addProduct(codigo, nombre, descripcion, cantidad, email);
-            alert("Producto fue agregado correctamente.");
+            await addProduct(codigo, nombre, apellido,correo);
+            alert("El usuario fue agregado correctamente.");
             window.location.href ="../home.html";
         }
     } catch (error) {
